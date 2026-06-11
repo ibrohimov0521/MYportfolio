@@ -40,6 +40,7 @@ Shu faylda quyidagilarni o'zgartirasiz:
 
 - `initials`: logo matni, hozir `JI`
 - `logoName`: logo yonidagi matn
+- `logoImageUrl`: header logo rasmi, hozir `/logo.jpg`
 - `firstName`, `lastName`, `role`: hero qismidagi asosiy matnlar
 - `email`, `telegramUsername`, `telegramUrl`, `location`: kontakt ma'lumotlari
 - `socialLinks`: Telegram, GitHub, LinkedIn, Instagram, YouTube linklari
@@ -52,6 +53,11 @@ Profil rasm qo'yish:
 ```js
 imageUrl: '/profile.jpg',
 ```
+
+Header logo rasmini almashtirish:
+
+1. Yangi logoni `public/logo.jpg` sifatida joylang.
+2. `src/data/siteData.js` ichida `logoImageUrl: '/logo.jpg'` bo'lib qoladi.
 
 Loyihalar kartalarini o'zgartirish:
 

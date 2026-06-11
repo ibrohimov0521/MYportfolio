@@ -3,6 +3,7 @@ import { Github, Instagram, Linkedin, Send, Youtube } from 'lucide-react';
 export const profile = {
   initials: 'JI',
   logoName: 'JAVOHIR',
+  logoImageUrl: '/logo.jpg',
   firstName: 'Javohir',
   lastName: 'Ibrohimov',
   role: 'IT Developer / Telegram Bot Developer',

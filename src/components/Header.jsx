@@ -33,9 +33,17 @@ export default function Header() {
     >
       <nav className="container-shell flex h-[74px] items-center justify-between">
         <a href="#home" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="gradient-text text-3xl font-black leading-none">
-            {profile.initials}
-          </span>
+          {profile.logoImageUrl ? (
+            <img
+              src={profile.logoImageUrl}
+              alt={`${profile.logoName} logo`}
+              className="h-10 w-10 rounded-full border border-blue-400/45 object-cover shadow-[0_0_22px_rgba(59,130,246,.35)]"
+            />
+          ) : (
+            <span className="gradient-text text-3xl font-black leading-none">
+              {profile.initials}
+            </span>
+          )}
           <span className="text-[15px] font-black uppercase tracking-wide text-white transition group-hover:text-cyan-200">
             {profile.logoName}
           </span>
