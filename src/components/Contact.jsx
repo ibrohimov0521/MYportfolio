@@ -31,7 +31,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.65 }}
-          className="glass-card grid gap-6 overflow-hidden rounded-xl p-5 sm:p-6 lg:grid-cols-[.9fr_1fr_1.25fr]"
+          className="glass-card grid gap-6 overflow-hidden rounded-xl p-5 sm:p-6 xl:grid-cols-[.9fr_1fr_1.25fr]"
         >
           <div className="relative">
             <p className="text-[15px] leading-7 text-slate-300">
@@ -55,7 +55,7 @@ export default function Contact() {
                   </span>
                   <span>
                     <span className="text-sm font-bold text-slate-300">{label}: </span>
-                    <span className="break-all text-sm text-white">{value}</span>
+                    <span className="break-words text-sm text-white">{value}</span>
                   </span>
                 </a>
               ))}
@@ -63,7 +63,7 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit} className="relative rounded-xl border border-white/10 bg-night/35 p-4">
             <div className="absolute -right-14 -top-16 h-40 w-40 rounded-full bg-violet-500/20 blur-3xl" />
-            <div className="relative grid gap-3 sm:grid-cols-2">
+            <div className="relative grid gap-3 2xl:grid-cols-2">
               <label className="grid gap-2 text-sm font-bold text-slate-200">
                 <span className="sr-only">Ismingiz</span>
                 <input
@@ -83,7 +83,7 @@ export default function Contact() {
                   placeholder="email@example.com"
                 />
               </label>
-              <label className="grid gap-2 text-sm font-bold text-slate-200 sm:col-span-2">
+              <label className="grid gap-2 text-sm font-bold text-slate-200 2xl:col-span-2">
                 <span className="sr-only">Xabaringiz</span>
                 <textarea
                   required
@@ -93,7 +93,7 @@ export default function Contact() {
                   placeholder="Loyiha haqida qisqacha yozing"
                 />
               </label>
-              <button type="submit" className="primary-button mt-1 w-full sm:col-span-2">
+              <button type="submit" className="primary-button mt-1 w-full 2xl:col-span-2">
                 <MessageCircle className="mr-2" size={18} />
                 Yuborish
               </button>
