@@ -7,8 +7,8 @@ const projects = [
     text: 'Telegram bot orqali foydalanuvchilarga avtomatlashtirilgan xizmat ko‘rsatish.',
     tag: 'Telegram Bot',
     logo: '/projects/bestgamers-assistant.jpg',
-    logoClass: 'object-contain',
-    logoBox: 'p-3',
+    logoClass: 'rounded-full object-cover',
+    logoBox: 'bg-[#030712] p-1.5',
   },
   {
     title: 'EMU Test Bot',
@@ -16,7 +16,7 @@ const projects = [
     tag: 'Telegram Bot',
     logo: '/projects/emu-test-bot.jpg',
     logoClass: 'object-contain',
-    logoBox: 'bg-white p-3',
+    logoBox: 'bg-white p-2',
   },
   {
     title: 'Best Tacos',
@@ -24,15 +24,15 @@ const projects = [
     tag: 'Web App',
     logo: '/projects/best-tacos.png',
     logoClass: 'object-contain',
-    logoBox: 'p-3',
+    logoBox: 'bg-black p-2',
   },
   {
     title: 'Ombor Hisob Tizimi',
     text: 'Ombordagi tovarlar kirim-chiqimi va qoldiqni boshqarish tizimi.',
     tag: 'Web App',
-    logo: '/projects/ombor-hisob-tizimi-thumb.png',
+    logo: '/projects/ombor-hisob-tizimi-icon.png',
     logoClass: 'object-contain',
-    logoBox: 'bg-slate-200 p-2',
+    logoBox: 'bg-[#0e1628] p-2',
   },
 ];
 
@@ -64,20 +64,20 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.28 }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="glass-card group relative overflow-hidden rounded-xl p-4 transition duration-300 hover:-translate-y-2 hover:border-violet-300/35 hover:shadow-neon"
+              className="glass-card group relative overflow-hidden rounded-xl p-5 transition duration-300 hover:-translate-y-2 hover:border-violet-300/35 hover:shadow-neon"
             >
               <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-cyan-300/10 blur-3xl transition group-hover:bg-cyan-300/20" />
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.025] shadow-neon">
-                <div className={`grid h-32 w-full place-items-center ${logoBox}`}>
+              <div className="relative">
+                <div className={`grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-2xl border border-white/10 shadow-neon ${logoBox}`}>
                   <img
                     src={logo}
                     alt={`${title} logo`}
-                    className={`max-h-full max-w-full ${logoClass}`}
+                    className={`h-full w-full ${logoClass}`}
                     loading="lazy"
                   />
                 </div>
               </div>
-              <h3 className="relative mt-5 text-base font-black text-white">{title}</h3>
+              <h3 className="relative mt-7 text-base font-black text-white">{title}</h3>
               <p className="relative mt-3 min-h-[64px] text-xs leading-6 text-slate-300">{text}</p>
               <span className="relative mt-4 inline-flex rounded-full bg-white/[0.06] px-3 py-1.5 text-[11px] font-bold text-white">
                 {tag}
