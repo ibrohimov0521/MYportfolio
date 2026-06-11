@@ -1,4 +1,4 @@
-import { Bot, Boxes, ShoppingBag, ClipboardCheck, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const projects = [
@@ -6,25 +6,29 @@ const projects = [
     title: 'BestGamers Assistant',
     text: 'Telegram bot orqali foydalanuvchilarga avtomatlashtirilgan xizmat ko‘rsatish.',
     tag: 'Telegram Bot',
-    icon: Bot,
+    logo: '/projects/bestgamers-assistant.jpg',
+    logoClass: 'rounded-full object-cover',
   },
   {
     title: 'EMU Test Bot',
     text: 'Testlar, imtihonlar va natijalarni boshqaradigan Telegram bot.',
     tag: 'Telegram Bot',
-    icon: ClipboardCheck,
+    logo: '/projects/emu-test-bot.jpg',
+    logoClass: 'rounded-2xl object-contain',
   },
   {
     title: 'Best Tacos',
     text: 'Fast food buyurtma qilish va yetkazib berish xizmati.',
     tag: 'Web App',
-    icon: ShoppingBag,
+    logo: '/projects/best-tacos.png',
+    logoClass: 'object-contain',
   },
   {
     title: 'Ombor Hisob Tizimi',
     text: 'Ombordagi tovarlar kirim-chiqimi va qoldiqni boshqarish tizimi.',
     tag: 'Web App',
-    icon: Boxes,
+    logo: '/projects/ombor-hisob-tizimi.png',
+    logoClass: 'object-contain',
   },
 ];
 
@@ -49,7 +53,7 @@ export default function Projects() {
         </motion.div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {projects.map(({ title, text, tag, icon: Icon }, index) => (
+          {projects.map(({ title, text, tag, logo, logoClass }, index) => (
             <motion.article
               key={title}
               initial={{ opacity: 0, y: 26 }}
@@ -60,11 +64,16 @@ export default function Projects() {
             >
               <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-cyan-300/10 blur-3xl transition group-hover:bg-cyan-300/20" />
               <div className="relative">
-                <div className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-blue-500 to-violet-600 text-white shadow-neon">
-                  <Icon size={30} />
+                <div className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-1.5 shadow-neon">
+                  <img
+                    src={logo}
+                    alt={`${title} logo`}
+                    className={`h-full w-full ${logoClass}`}
+                    loading="lazy"
+                  />
                 </div>
               </div>
-              <h3 className="relative mt-7 text-base font-black text-white">{title}</h3>
+              <h3 className="relative mt-6 text-base font-black text-white">{title}</h3>
               <p className="relative mt-3 min-h-[64px] text-xs leading-6 text-slate-300">{text}</p>
               <span className="relative mt-4 inline-flex rounded-full bg-white/[0.06] px-3 py-1.5 text-[11px] font-bold text-white">
                 {tag}
