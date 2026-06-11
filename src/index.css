@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #050816;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1070px] px-6 sm:px-8;
+  }
+
+  .glass-card {
+    @apply border border-white/10 bg-[#0b1020]/70 shadow-card backdrop-blur-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .section-title {
+    @apply text-2xl font-black tracking-tight text-white sm:text-3xl;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-xs font-bold uppercase tracking-[0.22em] text-cyan-300/80;
+  }
+
+  .section-underline {
+    @apply mt-3 h-1 w-16 rounded-full bg-gradient-to-r from-blue-500 via-violet-500 to-transparent;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#6d48ff] to-[#3e74ff] px-6 py-3 text-sm font-bold text-white shadow-neon transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_45px_rgba(76,95,255,.38)];
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-violet-300/50 hover:bg-violet-300/10;
+  }
+}
