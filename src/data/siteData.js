@@ -11,8 +11,8 @@ export const profile = {
   email: 'javohiribrohimov0521@gmail.com',
   telegramUsername: '@javohir_ibrohimov',
   telegramUrl: 'https://t.me/javohir_ibrohimov',
-  // Profil rasm qo'yish: rasmni public/profile.jpg qilib saqlang va quyidagini '/profile.jpg' qiling.
-  imageUrl: '',
+  // Profil rasm qo'yish: rasmni public ichiga saqlang va shu yo'lni yangilang.
+  imageUrl: '/profile.png',
 };
 
 export const socialLinks = [
