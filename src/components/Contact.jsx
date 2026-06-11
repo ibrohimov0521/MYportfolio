@@ -61,15 +61,15 @@ export default function Contact() {
               ))}
           </div>
 
-          <form onSubmit={handleSubmit} className="relative rounded-xl border border-white/10 bg-night/35 p-4">
+          <form onSubmit={handleSubmit} className="relative min-w-0 rounded-xl border border-white/10 bg-night/35 p-4">
             <div className="absolute -right-14 -top-16 h-40 w-40 rounded-full bg-violet-500/20 blur-3xl" />
-            <div className="relative grid gap-3 2xl:grid-cols-2">
+            <div className="relative grid min-w-0 gap-3">
               <label className="grid gap-2 text-sm font-bold text-slate-200">
                 <span className="sr-only">Ismingiz</span>
                 <input
                   required
                   name="name"
-                  className="rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
+                  className="min-w-0 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
                   placeholder="Ismingizni kiriting"
                 />
               </label>
@@ -79,21 +79,21 @@ export default function Contact() {
                   required
                   type="email"
                   name="email"
-                  className="rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
+                  className="min-w-0 rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
                   placeholder="email@example.com"
                 />
               </label>
-              <label className="grid gap-2 text-sm font-bold text-slate-200 2xl:col-span-2">
+              <label className="grid gap-2 text-sm font-bold text-slate-200">
                 <span className="sr-only">Xabaringiz</span>
                 <textarea
                   required
                   name="message"
                   rows="4"
-                  className="resize-none rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
+                  className="min-w-0 resize-none rounded-lg border border-white/10 bg-white/[0.035] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/45 focus:ring-4 focus:ring-cyan-300/10"
                   placeholder="Loyiha haqida qisqacha yozing"
                 />
               </label>
-              <button type="submit" className="primary-button mt-1 w-full 2xl:col-span-2">
+              <button type="submit" className="primary-button mt-1 w-full">
                 <MessageCircle className="mr-2" size={18} />
                 Yuborish
               </button>
